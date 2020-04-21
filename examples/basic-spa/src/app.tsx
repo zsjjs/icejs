@@ -5,7 +5,7 @@ const appConfig: IAppConfig = {
   app: {
     rootId: 'ice-container',
     errorBoundary: true,
-    parseQueryParams: true,
+    parseQueryParams: true
   },
   logger: {
     level: APP_MODE === 'build' ? 'error' : 'debug',
