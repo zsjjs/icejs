@@ -84,7 +84,8 @@ module.exports = (config, value, context) => {
     }]]);
   }
 
-  if (!commandArgs.disableReload) {
+  // add webpackHotDevClient when execute command is start and enable HMR
+  if (!commandArgs.disableReload && command === 'start') {
     entry = addHotDevClient(entry);
   }
   // remove default entry then add new enrty to webpack config
